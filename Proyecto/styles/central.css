@@ -1,0 +1,76 @@
+.central-page {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(to right, #524949, #070303);
+    background-color: #070303;
+    margin: -8px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.central-page > .left-section {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    color: #F1F1EF;
+    padding: 20px 50px;
+}
+
+.central-page > .left-section > .first > .textbold {
+    font-weight: bold;
+}
+
+.central-page > .left-section > .second {
+    font-size: 1.5rem;
+    padding-right: 100px;
+    color: #7c7676;
+}
+
+.central-page > .left-section > .btns-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.central-page > .left-section > .btns-section > .signupfree-btn a {
+    width: 100px;
+    background-color: #46d75e;
+    color: #070303;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 15px 20px;
+    font-size: 0.8em;
+}
+
+.central-page > .left-section > .btns-section > .learnmore-btn a {
+    width: 100px;
+    background-color: #070303;
+    color: #F1F1EF;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 15px 20px;
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+
+.central-page > .right-section {
+    display: flex;
+    flex-direction: column;
+    color: #F1F1EF;
+    padding-top: 30px;
+    margin-left: 50px;
+}
+
+.central-page > .right-section p {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.central-page > .right-section img {
+    height: 500px;
+    width: 100%;
+}
