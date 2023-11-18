@@ -1,37 +1,45 @@
+/* Header style */
+
 .header {
     background-color: #070303;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: -8px;
-    font-family: sans-serif;
+    margin: -8px -8px 5px -8px;
+    /* padding: 5px 0px; */
+    font-family: "Open Sans", sans-serif;
 }
 
+/* Logo style */
+
 .header > .logo img {
-    width: 200px;
-    padding: 20px 20px;
+    width: 170px;
+    padding: 15px 25px;
+    margin-top: 8px;
 }
+
+/* Links style */
 
 .header > .links-wrapper {
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 7px;
     margin-left: -110px;
 }
 
 .header > .links-wrapper > .explorar {
     color: #EFC125;
     text-transform: uppercase;
-    padding: 5px;
+    padding: 3px 4px;
 }
 
 .header > .links-wrapper > .links {
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .header > .links-wrapper > .links a {
     color: #F7F1EF;
     text-decoration: none;
-    padding: 5px;
+    padding: 0px 4px;
 }
 
 .header > .links-wrapper > .links > .disabled-link {
@@ -44,20 +52,22 @@
     margin-left: 10px;
 }
 
+/* Buttons */
+
 .header > .btns-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-left: 50px;
+    margin: 5px 8px;
 }
 
 .header > .btns-wrapper > .create-btn a {
     background-color: #5f5b5b;
     color: #F7F1EF;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 11px 20px;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .header > .btns-wrapper > .create-btn > .create > i {
@@ -84,9 +94,9 @@
     background-color: #5f5b5b;
     color: #F7F1EF;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 11px 20px;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .header > .btns-wrapper > .signup-btn a {
@@ -96,9 +106,9 @@
     background-color: #5f5b5b;
     color: #F7F1EF;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 11px 20px;
     border-radius: 4px;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .header > .btns-wrapper > .search-img i {

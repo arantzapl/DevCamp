@@ -1,37 +1,49 @@
+/* Central page style */
+
 .central-page {
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: linear-gradient(to right, #524949, #070303);
+    background: linear-gradient(to right bottom, #363645, #070303);
     background-color: #070303;
     margin: -8px;
-    font-weight: 300;
     line-height: 1.5;
 }
+
+/* Left section style */
 
 .central-page > .left-section {
     font-size: 2em;
     display: flex;
     flex-direction: column;
     color: #F1F1EF;
-    padding: 20px 50px;
+    padding: 0px 45px;
+}
+
+.central-page > .left-section > .first {
+    padding-top: 5px;
+    padding-left: 20px;
+    font-weight: 400;
 }
 
 .central-page > .left-section > .first > .textbold {
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .central-page > .left-section > .second {
-    font-size: 1.5rem;
-    padding-right: 100px;
+    font-size: 1.7rem;
+    margin-top: -15px;
+    padding-left: 20px;
     color: #7c7676;
+    font-weight: 500;
 }
 
 .central-page > .left-section > .btns-section {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 30px;
+    padding-left: 20px;
 }
 
 .central-page > .left-section > .btns-section > .signupfree-btn a {
@@ -57,12 +69,14 @@
     margin-left: 20px;
 }
 
+/* Right section style */
+
 .central-page > .right-section {
     display: flex;
     flex-direction: column;
     color: #F1F1EF;
-    padding-top: 30px;
-    margin-left: 50px;
+    padding-top: 20px;
+    margin-left: 70px;
 }
 
 .central-page > .right-section p {
@@ -70,7 +84,14 @@
     justify-content: flex-start;
 }
 
+.central-page > .right-section > .right > .colortext {
+    color: #666fe3;
+    padding-left: 5px;
+    font-weight: 900;
+}
+
 .central-page > .right-section img {
-    height: 500px;
+    height: 430px;
     width: 100%;
+    padding-bottom: 10px;
 }

@@ -1,0 +1,50 @@
+/* Footer style */
+
+.footer {
+    background-color: #363645;
+    margin: -8px;
+}
+
+.footer > .btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+}
+
+.footer > .btns > div {
+    text-align: center;
+    width: 100%;
+    padding: 12px 0px;
+    border-right: 1px solid white;
+}
+
+.footer > .btns > .btn1 a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: #eee9e9;
+}
+
+.footer > .btns > .btn2 a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: #eee9e9;
+}
+
+.footer > .btns > .btn3 a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: #eee9e9;
+}
+
+.footer > .btns > .btn4 a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: #eee9e9;
+}
+
+.footer > .btns > div > a > span {
+    font-family: "Alatsi", sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
