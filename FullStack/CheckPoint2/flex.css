@@ -1,0 +1,156 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #73dab2;
+}
+
+.flex {
+    margin: 10px;
+}
+
+.flexOne {
+    display: flex;
+
+    .square {
+        margin: 5px;
+    }
+}
+
+.flexTwo {
+    display: flex;
+    flex-direction: column;
+
+    .square {
+        margin: 2px;
+    }
+}
+
+
+.flexThree {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .square {
+        margin: 2px;
+    }
+}
+
+.flexFour {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+
+    .square {
+        margin: 5px;
+        background-color: #3d8b6d;
+    }
+}
+
+.flexFive {
+    display: flex;
+    width: 350px;
+
+    .item {
+        background-color: #0b6643;
+        margin: 2px;
+        height: 100px;
+        width: 100px;
+    }
+    
+    #grow {
+        flex-grow: 2;
+    }
+}
+
+.flexSix {
+    display: flex;
+    height: 400px;
+    width: 500px;
+    background-color: #f1f1f1;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .one {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .two {
+        display: flex;
+        justify-content: space-between;
+        background-color: #d6d6d6;
+    }
+
+    .three {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.flexSeven {
+    display: flex;
+    height: 400px;
+    width: 500px;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+
+    .one, .two,
+    .three, .four {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .one {
+        justify-content: center;
+    }
+
+    .two {
+        justify-content: flex-end;
+        background-color: #d6d6d6;
+    }
+
+    /* Es por defecto, no es necesario ponerlo, pero se podría establecer de la siguiente manera */
+    .three {
+        justify-content: flex-start;
+    }
+
+    .four {
+        justify-content: space-around;
+        background-color: #d6d6d6;
+    }
+}
+
+.flexEight {
+    display: flex;
+    height: 400px;
+    width: 300px;
+    background-color: #eeeeee;
+
+    .one {
+        display: flex;
+        align-items: center;
+    }
+
+    .two {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .three {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.flexNine {
+    display: flex;
+    width: 450px;
+    height: 250px;
+    background-color: #eeeeee;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    #special {
+        align-self: flex-end;
+    }
+}
