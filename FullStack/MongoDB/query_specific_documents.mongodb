@@ -1,0 +1,5 @@
+db.books.find( {name: "OOP Programming"} ).pretty()
+
+# SQL Equivalent
+
+SELECT * from books WHERE name = "OOP Programming"
