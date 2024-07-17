@@ -1,0 +1,21 @@
+body {
+    margin: 1rem;
+    padding: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #006700a4;
+}
+
+h2 {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    text-align: center;
+    color: #12a236;
+}
+
+pre {
+    margin-left: -4rem;
+}

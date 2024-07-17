@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CP6_BaseDatos_Python</title>
+</head>
+<body>
+    <h1>BASES DE DATOS MONGODB PYTHON</h1>
+    <hr>
+    <ol>
+        <li>¿Qué es MongoDB?</li>
+        <li>Características</li>
+        <li>Cuándo usar MongoDB</li>
+        <li>Ejemplo</li>
+    </ol>
+    <hr>
+    <h2>¿Qué es MongoDB?</h2>
+    <p>Es una base de datos NoSQL que se orienta a documentos. Está creada para guardar datos de forma flexible. A diferencia de las bases de datos relacionales (SQL) que almacenan sus datos en filas y tablas, MongoDB almacena los datos en un formato similar a JSON. Lo que permite que sea una estructura más libre, ideal para aplicaciones que necesiten cambios en el esquema de datos.</p>
+    <h2>Características</h2>
+    <ul>
+        <li>Está orientada a objetos. Los datos se almacenan en una extensión de JSON, lo que permite que sean más complejos que los modelos tradicionales.</li>
+        <li>MongoDB está diseñado para permitir distribuir datos mediante múltiples servidores; lo que es ideal para aplicaciones que manejen un gran volumen de datos y alta disponibilidad de ellos.</li>
+        <li>Admite consultas ad-hoc, búsquedas por campo, consultas de rango y expresiones regulares; además de frameworks que permiten realizar operaciones como sumas, promedios y agrupaciones de datos.</li>
+        <li>Permite la creación de índices en cualquier campo, lo que mejora la eficiencia de las consultas.</li>
+    </ul>
+    <h2>Cuándo usar MongoDB</h2>
+    <ul>
+        <li>En aplicaciones con datos en evolución y grandes tasas de inserciones.</li>
+        <li>En aplicaciones con esquemas de datos no estructurados.</li>
+        <li>En aplicaciones en tiempo real que necesitan una iteración y despliegue rápidos.</li>
+    </ul>
+    <h2>Ejemplo</h2>
+    <p>De la siguiente manera se almacenan los datos en la base de datos de MongoDB:</p>
+    <pre><code>
+        {
+            "_id": "507f1f77bcf86cd799439011",
+            "nombre": "Arantza Perez",
+            "edad": 30,
+            "dirección": {
+              "calle": "Calle San Martin",
+              "ciudad": "Bareyo",
+              "país": "España"
+            },
+            "intereses": ["taekwondo", "lectura", "programación"]
+          }
+    </code></pre>
+</body>
+</html>

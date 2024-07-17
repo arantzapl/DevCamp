@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CP6_Clases_Python</title>
+    
+</head>
+<body>
+    <h1>CLASES PYTHON</h1>
+    <hr>
+    <ol>
+        <li>Para qué se usan</li>
+        <li>Conceptos básicos</li>
+        <li>Beneficios de utilizar clases en Python</li>
+        <li>¿Qué método se ejecuta automáticamente al crear una instancia?</li>
+        <li>Decoradores</li>
+        <li>Herencia</li>
+        <li>Polimorfismo</li>
+        <li>Ejemplo final</li>
+    </ol>
+    <hr>
+    <h2>¿Para qué se usan las clases?</h2>
+        <p>Las clases en Python se usan para crear objetos que agrupan datos y funciones en una estructura organizada. Esto se conoce como programación orientada a objetos (POO). Las clases permiten modelar entidades del mundo real con atributos (datos) y métodos (funciones) que pueden operar sobre esos datos.</p>
+    
+    <h2>Conceptos básicos</h2>
+        <ul>
+            <li>Clase: Es una plantilla para crear objetos. Define un conjunto de atributos y métodos.</li>
+            <li>Objeto: Es una instancia de una clase. Cada objeto tiene sus propios valores para los atributos definidos en la clase.</li>
+            <li>Atributos: Son variables que pertenecen a la clase o a los objetos.</li>
+            <li>Métodos: Son funciones que pertenecen a la clase y pueden actuar sobre los atributos.</li>
+        </ul>
+    
+    <h2>Beneficios de utilizar clases en Python</h2>
+        <ul>
+            <li>Organización: agrupa los datos y las funciones relacionadas en una estructura legible y coherente.</li>
+            <li>Reutilización: se pueden crear más de un objeto desde la misma clase sin tener que repetir código: uno de los principios fundamentales de la programación: DRY (Don’t Repeat Yourself).</li>
+            <li>Abstracción: oculta los detalles más complejos para tener una interfaz sencilla</li>
+            <li>Modularidad: ayuda a separar las responsabilidades en el código.</li>
+        </ul>
+
+    <h2>¿Qué método se ejecuta automáticamente al crear una instancia?</h2>
+        <p>__init__ es el método que se ejecuta al crear una instancia de una clase, el llamado también “constructor”, cuya función es establecer los atributos del objeto.</p>
+        <p>En el ejemplo final se define el método __init__ que es donde se le pasan los atributos solicitados al Coche (objeto): marca, modelo y año. Siempre se solicita el argumento “self” para hacer referencia al objeto que se está creando en ese momento.</p>
+        <p>Este constructor es fundamental para inicializar los objetos y asegurarse de que cada instancia u objeto, se inicie en un estado correcto y válido.</p>
+    </p>
+
+    <h2>Decoradores</h2>
+        <p>Son una herramienta que permite modificar el comportamiento de funciones o métodos sin cambiar el código original. El decorador es una función que recibe otra como argumento, la modifica y devuelve una nueva.</p>
+        <p>Se utilizan para proteger o privatizar variables:
+            <ul>
+                <li>Se utiliza '_' (UN guión bajo) delante de una variable para especificar que se declara "protected" (protegida).</li>
+                <li>Se utiliza '__' (DOS guiones bajos) delante de una variable para especificar que se declara "private" (privada).</li>
+            </ul>
+        </p>
+        <p>Su funcionamiento se aplica con la sintaxis '@nombre_del_decorador' antes de definir la función.</p>
+    <h2>Herencia</h2>
+        <p>Permite crear una nueva clase (subclase) en base a una clase ya existente (clase padre o superclase). La subclase hereda los atributos y métodos de la superclase y de esta manera se promueve y facilita la reutilización del código.</p>
+    <h2>Polimorfismo</h2>
+        <p>Es un principio fundamental de la Programación Orientada a Objetos (POO). Permite facilitar el uso de una interfaz común para diferentes objetos y que el mismo método se utilice pero dando diferentes salidas según se establezca previamente.</p>
+        <p>El polimorfismo permite que una subclase sobreescriba métodos de la clase padre (superclase).</p>
+    
+    <h2>Ejemplo final</h2>
+        <p>Creamos un coche, mediante la clase “Coche” con los atributos propios (igual que en la vida real) como “marca”, “modelo”, “año”… Y métodos (acciones que tiene el coche) como “arrancar” o “detener”.</p>
+        <pre><code>
+            class Coche:
+                def __init__(self, marca, modelo, año):
+                    self.marca = marca
+                    self.modelo = modelo
+                    self.año = año
+
+                def arrancar(self):
+                    print(f"El {self.marca} {self.modelo} está arrancado.")
+
+                def detener(self):
+                    print(f"El {self.marca} {self.modelo} está parado.")
+
+            # Decoradores
+            def mayusculas(func):
+                def envoltura(self):
+                    resultado = func(self)
+                    return resultado.upper()
+                return envoltura
+
+            class CocheDecorado(Coche):
+                @mayusculas
+                def arrancar(self):
+                    return f"El {self.marca} {self.modelo} está arrancado."
+
+                @mayusculas
+                def detener(self):
+                    return f"El {self.marca} {self.modelo} está parado."
+
+            # Objetos utilizando DECORADORES (Instancias)
+            mi_coche = CocheDecorado("Toyota", "Corolla", 2020)
+            tu_coche = CocheDecorado("Honda", "Civic", 2018)
+
+            # Métodos
+            print(mi_coche.arrancar())
+            print(tu_coche.detener())
+
+            # Herencia
+            class Deportivo(Coche):
+                def arrancar(self):
+                    return f"El {self.marca} {self.modelo} está arrancando con un rugido potente."
+                
+            class Electrico(Coche):
+                def arrancar(self):
+                    return f"El {self.marca} {self.modelo} está arrancando silenciosamente."
+
+            # Objetos utilizando HERENCIA y POLIMORFISMO
+            deportivo = Deportivo("Ferrari", "340 América", 1951)
+            electrico = Electrico("Peugeot", "e-208", 2020)
+
+            # Métodos POLIMÓRFICOS
+            arrancar_coche(deportivo)
+            arrancar_coche(electrico)
+        </code></pre>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CP6_API_Python</title>
+</head>
+<body>
+    <h1>API PYTHON</h1>
+    <hr>
+    <ol>
+        <li>¿Qué es una API?</li>
+        <li>Características de una API</li>
+        <li>¿Qué es "PostMan"?</li>
+        <li>Beneficios de utilizar "PostMan"</li>
+    </ol>
+    <hr>
+    <h2>¿Qué es una API?</h2>
+    <p>API son las siglas de <i>Application Programming Interface</i>. Es un conjunto de definiciones y protocolos que permiten comunicar un software con otro:</p>
+    <ul>
+        <li>API de Biblioteca: Es la interfaz que proporciona una biblioteca para que interactúe con funciones y clases. Por ejemplo: la biblioteca 'requests' que Python utiliza para realizar solicitudes HTTP.</li>
+        <pre><code>
+            # Se importa la biblioteca 'requests' para realizar las solicitudes
+            import requests
+
+            # Hacer una solicitud GET a una API web
+            response = requests.get('https://api.ejemplo.com/datos')
+
+            # Verificar el estado de la respuesta
+            if response.status_code == 200: # 200 es el código de estado que devuelve una solicitud HTTP para indicar que se ha realizado correctamente.
+                # Procesar los datos de la respuesta (suponiendo que los datos son de tipo JSON)
+                datos = response.json()
+                print(datos)
+            else:
+                print(f"Error en la solicitud: {response.status_code}")
+        </code></pre>
+        <li>API Web: Es la interfaz que permite a las aplicaciones web comunicarse con servidores y bases de datos a través de la web; las cuales suelen utilizar HTTP para dichas comunicaciones y formatos JSON o XML para los intercambios de datos.</li>
+    </ul>
+    <h2>Características de una API</h2>
+    <ul>
+        <li>Tiene una interfaz consistente: define funciones y métodos que se deben utilizar de una manera concreta.</li>
+        <li>La API oculta la complejidad del sistema y solo muestra lo necesario para que los desarrolladores interactúen con él.</li>
+        <li>Siguen estándares y convenciones para que los diferentes sistemas se comuniquen correctamente.</li>
+        <li>Suelen tener documentación detallada con información sobre cómo utilizar las diferentes funciones y métodos disponibles.</li>
+    </ul>
+    <h2>¿Qué es "PostMan"?</h2>
+    <p>Es una herramienta que utilizan los desarrolladores para probar, desarrollar y documentar las APIs. Ofrece una interfaz gráfica que es muy intuitiva y facilita la creación de solicitudes HTTP y la supervisión de las respuestas que devuelven.</p>
+    <h2>Beneficios de utilizar "PostMan"</h2>
+    <ul>
+        <li>Su interfaz intuitiva hace que los desarrolladores interactúen con las APIs sin tener que escribir código</li>
+        <li>Soporta varios métodos HTTP y configuraciones de solicitudes.</li>
+        <li>Permiten automatizar pruebas y procesos repetitivos.</li>
+        <li>Las funciones de equipo facilitan la colaboración entre los miembros de este.</li>
+        <li>Facilita la creación de documentación interactiva.</li>
+    </ul>
+    </body>
+</html>
